@@ -1,0 +1,28 @@
+{
+  "name": "jiva-mono",
+  "version": "0.0.0-beta.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planetabhi/jiva-mono.git"
+  },
+  "keywords": [
+    "jiva",
+    "jiva mono",
+    "jiva font"
+  ],
+  "files": [
+    "README.md",
+    "OFL.txt"
+  ],
+  "author": "@planetabhi",
+  "license": "OFL-1.1",
+  "bugs": {
+    "url": "https://github.com/planetabhi/jiva-mono/issues"
+  },
+  "homepage": "https://github.com/planetabhi/jiva-mono#readme",
+  "description": "Monospaced pixel font with unique, recognizable character forms"
+}
