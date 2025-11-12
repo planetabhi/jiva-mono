@@ -16,7 +16,10 @@
   ],
   "files": [
     "README.md",
-    "OFL.txt"
+    "OFL.txt",
+    "fonts",
+    "fonts/JivaMono.otf",
+    "fonts/JivaMono.woff2"
   ],
   "author": "@planetabhi",
   "license": "OFL-1.1",
