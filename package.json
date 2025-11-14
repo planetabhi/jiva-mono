@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,12 @@
     "url": "https://github.com/planetabhi/jiva-mono/issues"
   },
   "homepage": "https://github.com/planetabhi/jiva-mono#readme",
-  "description": "Monospaced pixel font with unique, recognizable character forms"
+  "description": "Monospaced pixel font with unique, recognizable character forms",
+  "devDependencies": {
+    "@new-ui/reset": "^0.1.0",
+    "sass-embedded": "^1.93.3"
+  },
+  "dependencies": {
+    "vite": "^7.2.2"
+  }
 }

@@ -1,0 +1,113 @@
+:root {
+  --font-size: 8rem;
+  --color-primary: oklch(0.733 0.1855 327.26);
+  --color-accent: oklch(0.5932 0.2181 261.72);
+  --color-link: oklch(0.7668 0 0);
+  --color-bg: oklch(0.139 0.0029 246.26);
+}
+
+@font-face {
+  font-family: 'Jiva Mono';
+  font-display: swap;
+  src: url('/JivaMono.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jiva Mono', monospace;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-size: var(--font-size);
+  line-height: 1;
+  padding-top: calc(var(--font-size) + 2rem);
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: repeating-linear-gradient(
+      0deg,
+      var(--color-accent) 0,
+      var(--color-accent) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    animation: lines 3s ease-out infinite;
+    opacity: .2;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+  }
+}
+
+@keyframes lines {
+  to { background-position: 0 25px; }
+}
+
+span {
+  color: var(--color-accent);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  transition: color .2s;
+
+  &:hover {
+    color: oklch(0.9784 0.0011 197.14);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--color-bg);
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  border-top: 1px solid rgba(255, 255, 255, .05);
+
+  &:hover .marquee-content {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 29.0667s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-primary);
+  text-shadow: 0 0 10px rgba(228, 121, 228, .12);
+  filter: drop-shadow(0 0 6px rgba(228, 121, 228, .3));
+
+  span {
+    -webkit-text-stroke-color: var(--color-accent);
+  }
+
+  a {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-link);
+    text-shadow: 0 0 10px rgba(220, 221, 221, .4);
+
+    &:hover {
+      -webkit-text-stroke-color: #fff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, .5);
+    }
+  }
+}
